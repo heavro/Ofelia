@@ -20,18 +20,26 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         // initialize view
         $view = new Zend_View();
 
-        // configure it
+        // doctype
         $view->doctype('XHTML1_STRICT');
+        
+        // encoding
         $view->setEncoding('UTF-8');
+        
+        // title
         $view->headTitle('Ofelia')
              ->setSeparator(' | ')
              ->setIndent(8);
+        
+        // meta tags
         $view->headMeta()->setHttpEquiv('Content-Type', 'text/html; charset=UTF-8')
                          ->appendHttpEquiv('Content-Language', 'en-US')
                          ->setName('keywords', 'Ofelia, Open-ended Front-end')
                          ->appendName('description', "PHPCabal's Open-ended Front-end")
                          ->appendName('google-site-verification', '')
                          ->setIndent(8);
+        
+        // stylesheets & feeds (headLinks)
         $view->headLink()->setStylesheet('/css/default.css', 'all')
                          ->appendStylesheet('/css/menu.css', 'all')
                          ->headLink(
@@ -50,6 +58,12 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
                          )
                          ->appendAlternate('/feed/', 'application/rss+xml', 'Noticias Generales')
                          ->setIndent(8);
+        // javascript
+        $view->headScript()->appendFile('/js/default.js', 'text/javascript', 
+            array(
+                'charset' => 'utf-8'
+            )
+        )->setIndent(8);
 
         // add it to the ViewRenderer
         $viewRenderer = Zend_Controller_Action_HelperBroker::getStaticHelper('ViewRenderer');
