@@ -1,0 +1,42 @@
+#
+# Instructions for a Fedora 13 installation
+#
+
+# Install the ZendFramework
+su -c 'yum install -y php-ZendFramework*'
+
+# create a VirtualHost
+# /etc/httpd/conf/httpd.conf (at the bottom) 
+su -c 'echo "\
+NameVirtualHost *:80
+
+# Defalut
+<VirtualHost *:80>
+    DocumentRoot /var/www/html
+    ServerName localhost.localdomain
+    ServerAlias localhost
+</VirtualHost>
+
+# Ofelia
+<VirtualHost *:80>
+    DocumentRoot /var/www/Ofelia/public
+    ServerName ofelia.local
+    ServerAlias ofelia
+</VirtualHost>
+" >> /etc/httpd/conf/httpd.conf'
+
+# add the Ofelia custom domain to /etc/hosts
+su -c 'echo "\
+
+127.0.0.1   ofelia.local
+" >> /etc/hosts'
+
+# get the source
+cd /var/www
+su -c 'git clone git://github.com/PHPCabal/Ofelia.git'
+
+# Start apache
+su -c 'service httpd start'
+
+# Check out Ofelia on a web browser
+firefox ofelia.local

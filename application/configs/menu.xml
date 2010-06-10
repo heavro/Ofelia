@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <nav>
+        <home>
+            <label>home</label>
+            <controller>index</controller>
+            <action>index</action>
+            <title>go to the initial page</title>
+            <order>-100</order>
+        </home>
+        
+        <contact>
+            <label>contact</label>
+            <controller>index</controller>
+            <action>controller</action>
+            <title>go to the contact page</title>
+            <order>100</order>
+        </contact>
+    </nav>
+</config>

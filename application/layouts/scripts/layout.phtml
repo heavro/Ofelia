@@ -1,0 +1,46 @@
+<?php
+
+// setting the controller and action name as title segments:
+$request = Zend_Controller_Front::getInstance()->getRequest();
+$this->headTitle($request->getControllerName());
+
+?>
+<?php  echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n"; ?>
+<?php echo $this->doctype() . "\n"; ?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+    <head>
+        <!--Meta tags -->
+<?php echo $this->headMeta() . "\n"; ?>
+
+        <!--Title -->
+<?php echo ucwords($this->headTitle()) . "\n"; ?>
+
+        <!--CSS, Feeds and favicon -->
+<?php echo $this->headLink() . "\n"; ?>
+
+        <!--Javascript -->
+<?php echo $this->headScript() . "\n"; ?>
+    </head>
+
+    <body>
+        <div id="Main">
+            <div id="Header">
+<?php echo $this->partial('_header.phtml') . "\n"; ?>
+            </div>
+            
+            <div id="Menu">
+<?php echo $this->partial('_nav.phtml') . "\n"; ?>
+
+                <span id="BreadCrumbs"><?php echo $this->navigation()->breadcrumbs()->setMinDepth(0); ?></span>
+            </div>
+
+            <div id="Content">
+<?php echo $this->partial('_content.phtml') . "\n"; ?>
+            </div>
+
+            <div id="Footer">
+<?php echo $this->partial('_footer.phtml') . "\n"; ?>
+            </div>
+        </div>
+    </body>
+</html>
