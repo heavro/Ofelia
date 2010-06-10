@@ -11,6 +11,8 @@ We will develop the basic tools:
 - Database connections
 - Logging
 
+Don't forget to use the zf-tool to generate new controllers/views/modules/models. 
+
 Please, participate! ;)
 
 LinuxCabal's PHPCabal group
