@@ -9,35 +9,40 @@ $this->headTitle($request->getControllerName());
 <?php echo $this->doctype() . "\n"; ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
     <head>
-        <!--Meta tags -->
+        <!-- Meta tags -->
 <?php echo $this->headMeta() . "\n"; ?>
 
-        <!--Title -->
+        <!-- Title -->
 <?php echo ucwords($this->headTitle()) . "\n"; ?>
 
-        <!--CSS, Feeds and favicon -->
+        <!-- CSS, Feeds and favicon -->
 <?php echo $this->headLink() . "\n"; ?>
 
-        <!--Javascript -->
+        <!-- Javascript -->
 <?php echo $this->headScript() . "\n"; ?>
     </head>
 
     <body>
+        <!-- Main container -->
         <div id="Main">
+            <!-- Header container -->
             <div id="Header">
 <?php echo $this->partial('_header.phtml') . "\n"; ?>
             </div>
             
+            <!-- Menu container -->
             <div id="Menu">
 <?php echo $this->partial('_nav.phtml') . "\n"; ?>
 
                 <span id="BreadCrumbs"><?php echo $this->navigation()->breadcrumbs()->setMinDepth(0); ?></span>
             </div>
 
+            <!-- Content container -->
             <div id="Content">
 <?php echo $this->partial('_content.phtml') . "\n"; ?>
             </div>
 
+            <!-- Footer container -->
             <div id="Footer">
 <?php echo $this->partial('_footer.phtml') . "\n"; ?>
             </div>
