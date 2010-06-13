@@ -5,16 +5,18 @@ applications on top of ZendFramework.
 
 We will develop the basic tools:
 
-- HTML
-- Basic CSS
+- (x)HTML(5)
+- Basic CSS (2.1 | 3)
 - Session and User control interfaces (login/logout, profiles, ACLs, etc)
 - Database connections
 - Logging
 
 Don't forget to use the zf-tool to generate new
-controllers/views/modules/models. 
+controllers/views/modules/models.
 
 Please, participate! ;)
 
 LinuxCabal's PHPCabal group
+
+http://groups.google.com/group/PHPCabal
 http://linuxcabal.org/
