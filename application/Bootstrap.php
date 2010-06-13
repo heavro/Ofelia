@@ -92,6 +92,10 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 
     protected function _initSession()
     {
+        $config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/sessions.ini', 'development');
+ 
+        Zend_Session::setOptions($config->toArray());
+        
         // start session
         Zend_Session::start();
     }
@@ -105,7 +109,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         );
 
         // set cache backend options
-        $backendOptions = array('cache_dir' => APPLICATION_PATH . '/../tmp');
+        $backendOptions = array('cache_dir' => APPLICATION_PATH . '/../data/cache');
 
         // configure cache
         $cache = Zend_Cache::factory(
@@ -117,4 +121,3 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         Zend_Feed_Reader::useHttpConditionalGet();
     }
 }
-
