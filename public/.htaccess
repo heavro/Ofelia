@@ -1,3 +1,4 @@
+php_value date.timezone "America/Mexico_City"
 SetEnv APPLICATION_ENV development
 
 RewriteEngine On
