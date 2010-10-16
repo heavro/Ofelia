@@ -2,19 +2,6 @@
 
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 {
-    protected function _initAutoload()
-    {
-        // activate the module autoloader
-        $autoloader = new Zend_Application_Module_Autoloader(
-            array(
-                'namespace' => 'Default',
-                'basePath'  => dirname(__FILE__),
-            )
-        );
-
-        return $autoloader;
-    }
-
     protected function _initView()
     {
         // initialize view
@@ -32,8 +19,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
              ->setIndent(8);
         
         // meta tags
-        $view->headMeta()->setHttpEquiv('Content-Type', 'text/html; charset=UTF-8')
-                         ->appendHttpEquiv('Content-Language', 'en-US')
+        $view->headMeta()->appendHttpEquiv('Content-Language', 'en-US')
                          ->setName('keywords', 'Ofelia, Open-ended Front-end')
                          ->appendName('description', "PHPCabal's Open-ended Front-end")
                          ->appendName('google-site-verification', '')
