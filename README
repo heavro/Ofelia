@@ -1,3 +1,6 @@
+Introduction
+============
+
 Ofelia it's a codename for Open-ended Front-end
 
 Ofelia will stand as a building ground for those who are interested in developing 
@@ -11,12 +14,17 @@ We will develop the basic tools:
 - Database connections
 - Logging
 
+Contributing
+============
+
 Don't forget to use the zf-tool to generate new
 controllers/views/modules/models.
 
 Please, participate! ;)
 
-LinuxCabal's PHPCabal group
+Contact
+=======
 
+LinuxCabal's PHPCabal group
 http://groups.google.com/group/PHPCabal
 http://linuxcabal.org/
