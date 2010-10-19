@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <todo version="0.1.20">
-    <note priority="medium" time="1287212390">
+    <note priority="medium" time="1287212390" done="1287475097">
         Make the Page's title configurable in the application.ini and not hardcoded
+        <comment>
+            first solution... not so elegant
+        </comment>
     </note>
 </todo>

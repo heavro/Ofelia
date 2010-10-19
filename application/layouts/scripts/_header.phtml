@@ -1,4 +1,8 @@
-<?php $this->placeholder('header')->captureStart(); ?>
-<h1>Ofelia</h1>
-<small>Some cool slogan</acronym></small><?php $this->placeholder('header')->captureEnd(); ?>
+<?php 
+// get it's configuration file
+$site = new Zend_Config_Ini(APPLICATION_PATH . '/configs/site.ini', APPLICATION_ENV);
+
+$this->placeholder('header')->captureStart(); ?>
+<h1><?php echo $site->name; ?></h1>
+<small><?php echo $site->slogan; ?></small><?php $this->placeholder('header')->captureEnd(); ?>
 <?php echo $this->placeholder('header')->setIndent(16); ?>

@@ -6,23 +6,26 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     {
         // initialize view
         $view = new Zend_View();
+        
+        // get it's configuration file
+        $site = new Zend_Config_Ini(APPLICATION_PATH . '/configs/site.ini', APPLICATION_ENV);
 
         // doctype
-#        $view->doctype('XHTML1_STRICT');
+        $view->doctype($site->doctype);
         
         // encoding
-#        $view->setEncoding('UTF-8');
+        $view->setEncoding($site->encoding);
         
         // title
-#        $view->headTitle('Ofelia')
-#             ->setSeparator(' | ')
-#             ->setIndent(8);
+        $view->headTitle($site->name)
+             ->setSeparator(' | ')
+             ->setIndent(8);
         
         // meta tags
-        $view->headMeta()->appendHttpEquiv('Content-Language', 'en-US')
-                         ->setName('keywords', 'Ofelia, Open-ended Front-end')
-                         ->appendName('description', "PHPCabal's Open-ended Front-end")
-                         ->appendName('google-site-verification', '')
+        $view->headMeta()->appendHttpEquiv('Content-Language', $site->lang)
+                         ->setName('keywords', $site->keywords)
+                         ->appendName('description', $site->description)
+                         ->appendName('google-site-verification', $site->googleVerification)
                          ->setIndent(8);
         
         // stylesheets & feeds (headLinks)
@@ -42,15 +45,15 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
                             ),
                             'PREPEND'
                          )
-                         ->appendAlternate('/feed/', 'application/rss+xml', 'Noticias Generales')
+                         ->appendAlternate('/feed/', 'application/rss+xml', 'News')
                          ->setIndent(8);
         // javascript
         $view->headScript()->appendFile('/js/default.js', 'text/javascript', 
             array(
-                'charset' => 'utf-8'
+                'charset' => $site->encoding
             )
         )->setIndent(8);
-
+        
         // add it to the ViewRenderer
         $viewRenderer = Zend_Controller_Action_HelperBroker::getStaticHelper('ViewRenderer');
         $viewRenderer->setView($view);
@@ -73,7 +76,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 
     protected function _initSession()
     {
-        $config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/sessions.ini', 'development');
+        $config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/sessions.ini', APPLICATION_ENV);
  
         Zend_Session::setOptions($config->toArray());
         
