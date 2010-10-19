@@ -8,15 +8,15 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $view = new Zend_View();
 
         // doctype
-        $view->doctype('XHTML1_STRICT');
+#        $view->doctype('XHTML1_STRICT');
         
         // encoding
-        $view->setEncoding('UTF-8');
+#        $view->setEncoding('UTF-8');
         
         // title
-        $view->headTitle('Ofelia')
-             ->setSeparator(' | ')
-             ->setIndent(8);
+#        $view->headTitle('Ofelia')
+#             ->setSeparator(' | ')
+#             ->setIndent(8);
         
         // meta tags
         $view->headMeta()->appendHttpEquiv('Content-Language', 'en-US')
@@ -57,11 +57,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 
         // return it, so that it can be stored by the bootstrap
         return $view;
-    }
-    
-    protected function  _initLocale()
-    {
-        Zend_Locale::setDefault('en-US');
     }
 
     protected function _initMenu()
