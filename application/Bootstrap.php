@@ -22,8 +22,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
              ->setIndent(8);
         
         // meta tags
-        $view->headMeta()->appendHttpEquiv('Content-Language', $site->lang)
-                         ->setName('keywords', $site->keywords)
+        $view->headMeta()->setName('keywords', $site->keywords)
                          ->appendName('description', $site->description)
                          ->appendName('google-site-verification', $site->googleVerification)
                          ->setIndent(8);
