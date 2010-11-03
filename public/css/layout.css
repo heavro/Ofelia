@@ -1,0 +1,48 @@
+/* This section should contain layout CSS only.
+ * Add the divs needed accordingly.
+ */
+
+/* Reset */
+* {
+    margin:             0;
+    padding:            0;
+}
+
+/* Divs */
+div#Main {
+    margin:             1em;
+}
+
+div#Header {
+    min-height:         3em;
+    margin:             0 0 1.5em 0;
+}
+
+div#Header div#SiteName {
+    display:            inline-block;
+    vertical-align:     bottom;
+}
+
+div#Header div#Slogan {
+    display:            inline-block;
+    vertical-align:     bottom;
+}
+
+div#Header div#Menu {
+    display:            inline-block;
+    float:              right;
+}
+
+
+div#Menu {
+    margin:             0 0 .5em 0;
+}
+
+div#Content {
+    margin:             0 0 1.5em 0;
+    min-height:         5em;
+}
+
+div#Footer {
+    text-align:         right;
+}

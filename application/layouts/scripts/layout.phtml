@@ -27,13 +27,16 @@ $this->headTitle($request->getControllerName());
             <!-- Header container -->
             <div id="Header">
 <?php echo $this->partial('_header.phtml') . "\n"; ?>
+
+            <!-- Menu container -->
+                <div id="Menu">
+<?php echo $this->partial('_nav.phtml') . "\n"; ?>
+                </div>
             </div>
             
-            <!-- Menu container -->
-            <div id="Menu">
-<?php echo $this->partial('_nav.phtml') . "\n"; ?>
-
-                <span id="BreadCrumbs"><?php echo $this->navigation()->breadcrumbs()->setMinDepth(0); ?></span>
+            <!-- BreadCrumbs container -->
+            <div id="BreadCrumbs">
+                <span><?php echo $this->navigation()->breadcrumbs()->setMinDepth(0); ?></span>
             </div>
 
             <!-- Content container -->

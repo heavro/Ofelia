@@ -1,3 +1,13 @@
+/* General */
+
 body {
-    font: 10pt verdana;
+    font:           10pt verdana;
+}
+
+/* Particular */
+
+div#Header h1 {
+}
+
+div#Header small {
 }
