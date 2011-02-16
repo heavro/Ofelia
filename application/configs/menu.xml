@@ -8,6 +8,14 @@
             <title>go to the initial page</title>
             <order>-100</order>
         </home>
+
+        <login>
+            <label>login</label>
+            <controller>user</controller>
+            <action>login</action>
+            <title>go to login page</title>
+            <order>99</order>
+        </login>
         
         <contact>
             <label>contact</label>
