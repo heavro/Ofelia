@@ -58,7 +58,10 @@
       <publicIndexFile filesystemName="index.php"/>
       <htaccessFile filesystemName=".htaccess"/>
     </publicDirectory>
-    <projectProvidersDirectory enabled="false"/>
+    <projectProvidersDirectory>
+      <projectProviderFile projectProviderName="ofelia" actionNames="install"/>
+      <projectProviderFile projectProviderName="ofelia" actionNames="uninstall"/>
+    </projectProvidersDirectory>
     <temporaryDirectory enabled="false"/>
     <testsDirectory>
       <testPHPUnitConfigFile filesystemName="phpunit.xml"/>
