@@ -5,7 +5,6 @@ require_once 'Zend/Tool/Project/Provider/Exception.php';
 
 class OfeliaProvider extends Zend_Tool_Project_Provider_Abstract
 {
-
     public function install()
     {
         $this->_registry
@@ -19,6 +18,4 @@ class OfeliaProvider extends Zend_Tool_Project_Provider_Abstract
              ->getResponse()
              ->appendContent('This is not implemented yet.');
     }
-
-
 }
