@@ -1,0 +1,12 @@
+CREATE TABLE users (
+    id UNSIGNED INTEGER  NOT NULL PRIMARY KEY,
+    username VARCHAR(20) UNIQUE NOT NULL,
+    password VARCHAR(40) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL DEFAULT 'John Doe',
+    authenticated BOOLEAN NOT NULL DEFAULT 'false',
+    disabled BOLEAN NOT NULL DEFAULT 'false',
+    modified TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX "id" ON "users" ("id");
