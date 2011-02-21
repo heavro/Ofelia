@@ -33,6 +33,7 @@ class UserController extends Zend_Controller_Action
         }
  
         $this->view->values = $form->getValues();
+        
         // now try and authenticate....
     }
 
