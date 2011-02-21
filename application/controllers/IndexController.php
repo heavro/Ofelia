@@ -12,16 +12,6 @@ class IndexController extends Zend_Controller_Action
     public function indexAction()
     {
         $this->flashMessenger->addMessage('This is a message test');
-        $this->flashMessenger->addMessage('This is another message');
-        $this->flashMessenger->addMessage('This is another message');
-        $this->flashMessenger->addMessage('This is another message');
-        $this->flashMessenger->addMessage('This is another message');
-        $this->flashMessenger->addMessage('This is another message');
-        $this->flashMessenger->addMessage('This is another message');
-        $this->flashMessenger->addMessage('This is another message');
-        $this->flashMessenger->addMessage('This is another message');
     }
-
-
 }
 
