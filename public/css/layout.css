@@ -43,6 +43,19 @@ div#Content {
     min-height:         5em;
 }
 
+div#Messages {
+    max-height: 2.5em;
+    max-width: 50%;
+    margin: auto;
+    overflow: auto;
+    text-align: center;
+    vertical-align: top;
+}
+
+div#Messages span.message {
+    display: block;
+}
+
 div#Footer {
     text-align:         right;
 }

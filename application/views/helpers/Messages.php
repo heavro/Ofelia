@@ -21,7 +21,7 @@ class Zend_View_Helper_Messages extends Zend_View_Helper_Abstract
         foreach ($messages as $key => $value)
         {
             $this->messagesFormated .= <<< EOF
-<span class="messages" id="messageid{$key}">$value</span>
+<span class="message" id="messageid{$key}">$value</span>
 
 EOF;
         }

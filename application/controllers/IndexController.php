@@ -13,6 +13,13 @@ class IndexController extends Zend_Controller_Action
     {
         $this->flashMessenger->addMessage('This is a message test');
         $this->flashMessenger->addMessage('This is another message');
+        $this->flashMessenger->addMessage('This is another message');
+        $this->flashMessenger->addMessage('This is another message');
+        $this->flashMessenger->addMessage('This is another message');
+        $this->flashMessenger->addMessage('This is another message');
+        $this->flashMessenger->addMessage('This is another message');
+        $this->flashMessenger->addMessage('This is another message');
+        $this->flashMessenger->addMessage('This is another message');
     }
 
 
