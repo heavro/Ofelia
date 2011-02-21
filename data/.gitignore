@@ -1,6 +1,7 @@
 *
 !.gitignore
 !cache/
+!databases/
 !indexes/
 !locales/
 !logs/
