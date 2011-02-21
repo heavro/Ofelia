@@ -2,8 +2,6 @@
 
 class Application_Model_Users
 {
-    class Application_Model_Guestbook
-{
     protected $_id;
     protected $_username;
     protected $_password;

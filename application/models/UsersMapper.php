@@ -58,7 +58,7 @@ class Application_Model_UsersMapper
               ->setName($row->name)
               ->setAuthenticated($row->authenticated)
               ->setDisabled($row->disabled)
-              ->setModified($row->modified)
+              ->setModified($row->modified);
     }
  
     public function fetchAll()
@@ -73,7 +73,7 @@ class Application_Model_UsersMapper
                   ->setEmail($row->email)
                   ->setName($row->name)
                   ->setAuthenticated($row->authenticated)
-                  ->setDisabled($row->disabled)
+                  ->setDisabled($row->disabled);
             $entries[] = $entry;
         }
         return $entries;
