@@ -83,6 +83,11 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         // start session
         Zend_Session::start();
     }
+    
+    protected function _initMessages()
+    {
+        Zend_Controller_Action_HelperBroker::addHelper(new Zend_Controller_Action_Helper_FlashMessenger());
+    }
 
     protected function _initFeed()
     {
