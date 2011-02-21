@@ -6,11 +6,13 @@ class IndexController extends Zend_Controller_Action
     public function init()
     {
         /* Initialize action controller here */
+        $this->flashMessenger = $this->_helper->FlashMessenger;
     }
 
     public function indexAction()
     {
-        // action body
+        $this->flashMessenger->addMessage('This is a message test');
+        $this->flashMessenger->addMessage('This is another message');
     }
 
 

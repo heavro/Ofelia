@@ -43,6 +43,11 @@ $this->headTitle($request->getControllerName());
             <div id="Content">
 <?php echo $this->partial('_content.phtml') . "\n"; ?>
             </div>
+            
+            <!-- Messages container -->
+            <div id="Messages">
+<?php echo $this->messages(); ?>
+            </div>
 
             <!-- Footer container -->
             <div id="Footer">
