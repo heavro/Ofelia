@@ -31,6 +31,8 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $view->headLink()->setStylesheet('/css/layout.css', 'all')
                          ->appendStylesheet('/css/default.css', 'all')
                          ->appendStylesheet('/css/menu.css', 'all')
+                         ->appendStylesheet('/css/jquery_theme/jquery-ui-1.8.9.custom.css')
+                         ->appendStylesheet('/css/jquery_theme_modifier.css')
                          ->headLink(
                              array(
                                 'rel' => 'favicon',
@@ -47,8 +49,12 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
                          )
                          ->appendAlternate('/feed/', 'application/rss+xml', 'News')
                          ->setIndent(8);
-        // javascript
-        $view->headScript()->appendFile('/js/default.js', 'text/javascript', 
+
+        // jQuery and javascript
+        $view->addHelperPath("ZendX/JQuery/View/Helper", "ZendX_JQuery_View_Helper");
+        $view->headScript()->appendFile('https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+                           ->appendFile('https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js')
+                           ->appendFile('/js/default.js', 'text/javascript', 
             array(
                 'charset' => $site->encoding
             )
@@ -57,6 +63,9 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         // add it to the ViewRenderer
         $viewRenderer = Zend_Controller_Action_HelperBroker::getStaticHelper('ViewRenderer');
         $viewRenderer->setView($view);
+        
+        // register viewRenderer
+        Zend_Controller_Action_HelperBroker::addHelper($viewRenderer);
 
         // return it, so that it can be stored by the bootstrap
         return $view;
