@@ -44,8 +44,8 @@ div#Content {
 }
 
 div#Messages {
+    background: #cfc;
     max-height: 2.5em;
-    max-width: 50%;
     margin: auto;
     overflow: auto;
     text-align: center;
@@ -54,6 +54,11 @@ div#Messages {
 
 div#Messages span.message {
     display: block;
+}
+
+div#Messages span.message:hover {
+    background: #ff9;
+    cursor: pointer;
 }
 
 div#Footer {
