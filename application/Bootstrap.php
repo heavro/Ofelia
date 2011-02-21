@@ -51,9 +51,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 
         // jQuery and javascript
         $view->addHelperPath("ZendX/JQuery/View/Helper", "ZendX_JQuery_View_Helper");
-        $view->headScript()->appendFile('https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
-                           ->appendFile('https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js')
-                           ->appendFile('/js/default.js', 'text/javascript', 
+        $view->headScript()->appendFile('/js/default.js', 'text/javascript', 
             array(
                 'charset' => $site->encoding
             )

@@ -47,9 +47,11 @@ div#Content {
 
 div#Messages {
     margin: auto;
-    text-align: center;
+    max-height: 2.5em;
+    overflow: auto;
+    text-align: left;
     vertical-align: top;
-    width: 200px;
+    width: 50%;
 }
 
 div#Messages span.message {
