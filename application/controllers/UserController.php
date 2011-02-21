@@ -23,7 +23,7 @@ class UserController extends Zend_Controller_Action
     public function loginAction()
     {
         if (!$this->getRequest()->isPost()) {
-            return $this->_forward('index');
+            return $this->_redirect('/user/index');
         }
         $form = $this->getForm();
         if (!$form->isValid($_POST)) {
