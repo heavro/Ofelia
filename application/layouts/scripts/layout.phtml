@@ -38,15 +38,15 @@ $this->headTitle($request->getControllerName());
             <div id="BreadCrumbs">
                 <span><?php echo $this->navigation()->breadcrumbs()->setMinDepth(0); ?></span>
             </div>
+            
+            <!-- Messages container -->
+            <div <?php echo $x = $this->messages() ? 'class="resizable"' : ''; ?> id="Messages">
+<?php echo $this->messages(); // TODO: put this on a container and modify the helper so it doesn't format anything ?>
+            </div>
 
             <!-- Content container -->
             <div id="Content">
 <?php echo $this->partial('_content.phtml') . "\n"; ?>
-            </div>
-            
-            <!-- Messages container -->
-            <div id="Messages">
-<?php echo $this->messages(); ?>
             </div>
 
             <!-- Footer container -->

@@ -3,10 +3,12 @@
  */
 
 /* Reset */
+/*
 * {
     margin:             0;
     padding:            0;
 }
+*/
 
 /* Divs */
 div#Main {
@@ -44,15 +46,14 @@ div#Content {
 }
 
 div#Messages {
-    background: #cfc;
-    max-height: 2.5em;
     margin: auto;
-    overflow: auto;
     text-align: center;
     vertical-align: top;
+    width: 200px;
 }
 
 div#Messages span.message {
+    background: #cfc;
     display: block;
 }
 
