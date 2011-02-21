@@ -22,10 +22,16 @@ class Application_Form_Login extends Zend_Form
         $password->setLabel('Password')
                  ->addValidator('StringLength', false, array(6))
                  ->setRequired(true);
+        
+        // Add some CSRF protection
+        $csfr = $this->addElement('hash', 'csrf', array(
+            'ignore' => true,
+        ));
          
         // Add elements to form:
         $this->addElement($username)
              ->addElement($password)
+             ->addElement('hash', 'csrf', array('ignore' => true))
              ->addElement('submit', 'login', array('label' => 'Login'));
     }
 }

@@ -22,19 +22,22 @@ class UserController extends Zend_Controller_Action
 
     public function loginAction()
     {
-        if (!$this->getRequest()->isPost()) {
+        $request = $this->getRequest();
+        $form = $this->getForm();
+        
+        if ($request->isPost()) {
+            if ($form->isValid($request->getPost())) {
+                $this->view->values = $form->getValues();
+                
+                // Auth
+                
+            } else {
+                $this->view->form = $form;
+                $this->render('index');
+            }
+        } else {
             return $this->_redirect('/user/index');
         }
-        $form = $this->getForm();
-        if (!$form->isValid($_POST)) {
-            // Failed validation; redisplay form
-            $this->view->form = $form;
-            $this->render('index');
-        }
- 
-        $this->view->values = $form->getValues();
-        
-        // now try and authenticate....
     }
 
 

@@ -28,6 +28,8 @@
         <dbTableDirectory>
           <dbTableFile dbTableName="Users"/>
         </dbTableDirectory>
+        <modelFile modelName="Users"/>
+        <modelFile modelName="UsersMapper"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <viewsDirectory>
