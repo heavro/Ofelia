@@ -40,7 +40,7 @@ $this->headTitle($request->getControllerName());
             </div>
             
             <!-- Messages container -->
-            <div <?php echo $x = $this->messages() ? 'class="resizable"' : ''; ?> id="Messages">
+            <div id="Messages">
 <?php echo $this->messages(); // TODO: put this on a container and modify the helper so it doesn't format anything ?>
             </div>
 
