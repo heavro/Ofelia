@@ -31,7 +31,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $view->headLink()->setStylesheet('/css/layout.css', 'all')
                          ->appendStylesheet('/css/default.css', 'all')
                          ->appendStylesheet('/css/menu.css', 'all')
-                         ->appendStylesheet('/css/jquery_theme/jquery-ui-1.8.9.custom.css')
                          ->appendStylesheet('/css/jquery_theme_modifier.css')
                          ->headLink(
                              array(
