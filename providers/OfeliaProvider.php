@@ -8,16 +8,22 @@ class OfeliaProvider extends Zend_Tool_Project_Provider_Abstract
 
     public function install()
     {
-        /** @todo Implementation */
+        $this->_registry
+             ->getResponse()
+             ->appendContent('Not implemented yet');
     }
 
     public function uninstall()
     {
-        /** @todo Implementation */
+        $this->_registry
+             ->getResponse()
+             ->appendContent('Not implemented yet');
     }
 
     public function fixperms()
     {
-
+        $this->_registry
+             ->getResponse()
+             ->appendContent('Not implemented yet');
 	}
 }
