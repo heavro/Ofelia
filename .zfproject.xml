@@ -61,6 +61,8 @@
     <projectProvidersDirectory>
       <projectProviderFile projectProviderName="ofelia" actionNames="install"/>
       <projectProviderFile projectProviderName="ofelia" actionNames="uninstall"/>
+      <projectProviderFile projectProviderName="ofelia" actionNames="fixperms"/>
+      <projectProviderFile projectProviderName="ofelia" actionNames="install"/>
     </projectProvidersDirectory>
     <temporaryDirectory enabled="false"/>
     <testsDirectory>
@@ -68,7 +70,7 @@
       <testApplicationDirectory>
         <testApplicationBootstrapFile filesystemName="bootstrap.php"/>
         <testApplicationControllerDirectory>
-          <testApplicationControllerFile filesystemName="ContactControllerTest.php"/>
+          <testApplicationControllerFile/>
         </testApplicationControllerDirectory>
       </testApplicationDirectory>
       <testLibraryDirectory>
